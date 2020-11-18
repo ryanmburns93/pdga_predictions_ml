@@ -18,8 +18,10 @@ Here are some additional factors I would like to include in the model:
 
 The code below must be run in the order specified below.  Note that the scrape_all_players.py file has a terrible run time.  I am working on making an updated version that only pulls data for the players we are interested in.
 
+The below assumes that it is saved in a directory with a subdirectory named "data"
+
 1. Scrape Data
-    - scrape_all_players.py
+    - scrape_2019_pros.py
     - scrape_elite_events.py
     - scrape_ratings_history.py
 2. Build Data

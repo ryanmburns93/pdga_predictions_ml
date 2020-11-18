@@ -15,16 +15,24 @@ import requests
 #from selenium.webdriver.common.keys import Keys
 #from webdriver_manager.chrome import ChromeDriverManager
 
-from bs4 import BeautifulSoup
-from bs4.dammit import EncodingDetector
-
-import re #Regex for lists
 
 
 # Read In List of Top Pro PDGA Numbers
-pro_pdga_numbers = pd.read_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\top_pro_pdga_number.csv")
+pro_pdga_players = pd.read_csv("data/all_fields_2019_pro.csv")
 
-str_pdga_list = pro_pdga_numbers.pdga_number.astype(str)
+
+
+pro_pdga_players = pro_pdga_players.sort_values(by = ['rating'],ascending = False)
+
+
+# Output a list of PDGA numbers in Model Data
+
+pro_pdga_numbers = pro_pdga_players[['pdga_number']].drop_duplicates()
+
+pro_pdga_numbers_150 = pro_pdga_numbers.head(150)
+
+
+str_pdga_list = pro_pdga_numbers_150.pdga_number.astype(str)
 
 
 
@@ -59,4 +67,4 @@ for number in str_pdga_list:
 
 
 
-all_rating.to_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\pro_rating_history.csv")
+all_rating.to_csv("data/pro_rating_history.csv")

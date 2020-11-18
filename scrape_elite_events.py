@@ -10,18 +10,10 @@ import pandas as pd
 import lxml.html
 from lxml.cssselect import CSSSelector
 import requests
-#from selenium import webdriver
-#from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
-
 from bs4 import BeautifulSoup
 from bs4.dammit import EncodingDetector
 
 import re #Regex for lists
-
-
-# Build a crawler to find all pages of the style we want
-# https://www.freecodecamp.org/news/how-to-build-a-url-crawler-to-map-a-website-using-python-6a287be1da11/
 
 
 # Define Function to Read CSS Data and return as a dataset
@@ -84,14 +76,6 @@ tour_events = str_filter(all_links)
 tour_events = np.unique(tour_events)
 event_urls = ['https://www.pdga.com' + str(x) for x in tour_events]
 
-
-# Sort tour_events by event number, guess at merge with event_names
-
-# tour_events_sorted = [int(x.split('event/')[1]) for x in event_urls]
-# tour_events_sorted.sort()
-
-# all_pro_a['tourney_num_guess'] = tour_events_sorted
-# all_pro_a['url_guess'] = 'https://www.pdga.com/tour/event/'+all_pro_a['tourney_num_guess'].astype(str)
 
 
 # Visit Each Event and Pull Data
@@ -165,7 +149,7 @@ event_details_export = event_details.merge(all_elite_merge,
 
 # Write to CSV
 
-event_details_export.to_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\a_tier_event_details.csv")
+event_details_export.to_csv("data/a_tier_event_details.csv")
 
 
 

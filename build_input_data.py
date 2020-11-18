@@ -8,15 +8,14 @@ Created on Sun Nov 15 19:05:54 2020
 
 import numpy as np
 import pandas as pd
-import re
 from itertools import compress
 
 
 # Read in Player List and Event Detail
 
-event_details = pd.read_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\a_tier_event_details.csv")
-all_players = pd.read_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\all_fields.csv")
-rating_history = pd.read_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\pro_rating_history.csv")
+event_details = pd.read_csv("data/a_tier_event_details.csv")
+all_players = pd.read_csv("data/all_fields_2019_pro.csv")
+rating_history = pd.read_csv("data/pro_rating_history.csv")
 
 # Clean Up Variables in all_players dataset
 
@@ -144,18 +143,9 @@ model_data = all_ratings.drop_duplicates(subset = ['pdga_number','standard_event
 
 
 
-# Output a list of PDGA numbers in Model Data
-
-
-unique_players = model_data[['pdga_number']].drop_duplicates()
-
-unique_players.to_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\top_pro_pdga_number.csv")
-
-
-
 # Write model data to csv
 
-model_data.to_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\model_data.csv")
+model_data.to_csv("data/model_data.csv")
 
 
 

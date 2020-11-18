@@ -10,8 +10,7 @@ The process comes from: https://machinelearningmastery.com/machine-learning-in-p
 """
 
 # Import libraries
-import sys
-import scipy
+
 import numpy as np
 import matplotlib as mat
 import pandas as pd
@@ -27,11 +26,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
-from sklearn.preprocessing import OneHotEncoder
 import seaborn as sns
-from sklearn import metrics
 # Read in model_data
-dataset = pd.read_csv(r"C:\Users\samta\Documents\Python Scripts\disc_golf\data\model_data.csv")
+dataset = pd.read_csv("data/model_data.csv")
 
 
 
