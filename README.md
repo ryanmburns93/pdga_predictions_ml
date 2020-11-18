@@ -1,6 +1,6 @@
 # Predicting Winners of PDGA Elite Events Using Machine Learning
 
-This is a personal project that attempts to answer a question noone has asked: Can we use machine learning algorithms to predict the winners of elite professional disc golf tournaments?  
+This is a personal project that attempts to answer a question of great importance to the world: Can we use machine learning algorithms to predict the winners of elite professional disc golf tournaments?  
 
 The answer to that queston is kind of.  Using three factors (player, tournament, and the player's most recent PDGA rating prior to the tournament), when estimating which players will finish in the top 5 of any given tournament, we can achieve an overall accuracy of 85% and a precision of 70% within the top 5.  This probably isn't good enough to bet money on, but it is a start. 
 
