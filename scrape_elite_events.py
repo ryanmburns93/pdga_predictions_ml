@@ -95,7 +95,7 @@ for k in event_urls:
     place = css_reader('td.place')
     pdga_number = css_reader('td.pdga-number')
     prize = css_reader('td.prize')
-    #date = css_reader('.tournament-date')
+    date = css_reader('.tournament-date')
     #headers = css_reader('.tournament-date')
     #round_scores = css_reader('td.round') Need to write code to figure out  how many rounds
 
