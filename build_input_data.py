@@ -56,7 +56,6 @@ event_details.loc[(event_details.event_name.str.contains("Steilacoom"), 'standar
 event_details.loc[(event_details.event_name.str.contains("King"), 'standard_event_name')] = 'king_of_the_lake'
 event_details.loc[(event_details.event_name.str.contains("Rochester"), 'standard_event_name')] = 'rochester_open'
 
-
 # Extract Date Information from Event Details
 months = ['January','February','March','April','May','June','July','August',
           'September','October','November','December']
